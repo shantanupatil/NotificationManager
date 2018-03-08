@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fffefe"
+    tools:context="in.shantanupatil.notificationmanager.LauncherActivity">
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/image_front"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/homepagelauncher"/>
+
+        <TextView
+            android:id="@+id/text_front"
+            android:layout_marginTop="18dp"
+            android:layout_below="@+id/image_front"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:padding="10dp"
+            android:text="@string/easy_for_user"/>
+
+        <Button
+            android:background="@drawable/primarybutton"
+            android:id="@+id/buttonSignin"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_below="@+id/text_front"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Sign In"
+            android:textColor="#FFF"
+            android:textSize="18sp"/>
+
+        <Button
+            android:background="@drawable/secondarybutton"
+            android:id="@+id/buttonSignup"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_below="@+id/buttonSignin"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Register"
+            android:textColor="#333"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

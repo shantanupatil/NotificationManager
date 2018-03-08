@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="in.shantanupatil.notificationmanager">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- tools:replace="android:theme"> -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_access_time_white_24dp" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+
+        <activity
+            android:exported="true"
+            android:name=".IntroSlider.IntroLauncer"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Model.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LoginActivity" />
+        <activity
+            android:name=".Model.ForgetPassword"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/LoginActivity" />
+        <activity
+            android:name=".Events.AddEvents.AddEventActivity"
+            android:label="Add Event"
+            android:parentActivityName=".HomePage"
+            android:theme="@style/EventActivity" />
+        <activity
+            android:name=".Events.RetriveEvents.EventItemsList"
+            android:label="Trending Events"
+            android:parentActivityName=".HomePage"
+            android:theme="@style/EventActivity" />
+        <activity
+            android:name=".Events.RetriveEvents.ActivityEventDetail"
+            android:label="Detail"
+            android:parentActivityName=".Events.RetriveEvents.EventItemsList"
+            android:theme="@style/LoginActivity" />
+        <activity
+            android:name=".TandP.AddInformation.AddTnp"
+            android:label="Add Article"
+            android:parentActivityName=".HomePage"
+            android:screenOrientation="portrait"
+            android:theme="@style/TNPActivity" />
+        <activity
+            android:name=".TandP.RetriveInformation.TNP"
+            android:label="Training and Placement"
+            android:parentActivityName=".HomePage"
+            android:theme="@style/TNPActivity" />
+        <activity
+            android:name=".TandP.RetriveInformation.TNPDetail"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".Staff.AddStaffMessage.AddStaff"
+            android:label="Add Notice"
+            android:parentActivityName=".HomePage"
+            android:theme="@style/NoticeActivity" />
+        <activity
+            android:name=".Staff.RetriveStaff.NoticeActivity"
+            android:label="Student Notice"
+            android:parentActivityName=".HomePage"
+            android:theme="@style/NoticeActivity" />
+        />
+        <activity
+            android:name=".Staff.RetriveStaff.NoticeDetailActivity"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".HomePage"
+            android:label="@string/title_activity_home_page"
+            android:theme="@style/HomePageTheme" />
+        <activity
+            android:name=".FAQ.FAQActivity"
+            android:label="Frequently Asked Questions"
+            android:parentActivityName=".HomePage" />
+
+        <service
+            android:name=".FirebaseMessagingService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".FAQ.FAQDetails"
+            android:parentActivityName=".HomePage"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".About"
+            android:label="About"
+            android:parentActivityName=".HomePage" />
+        <activity
+            android:name=".Model.LoginActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/LoginActivity" />
+        <activity
+            android:name=".IntroSlider.LauncherScreenActivity"
+            android:theme="@style/NoActionBar" />
+        <activity android:name=".Credits"
+            android:label="Credits"
+            android:parentActivityName=".HomePage"></activity>
+    </application>
+
+</manifest>

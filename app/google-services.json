@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "275937198342",
+    "firebase_url": "https://whatup-notifier.firebaseio.com",
+    "project_id": "whatup-notifier",
+    "storage_bucket": "whatup-notifier.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:275937198342:android:64a4ffe545bb6c0d",
+        "android_client_info": {
+          "package_name": "in.shantanupatil.notificationmanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "275937198342-lmtstnuo8uhtn2n6t39agt3nk22tmjig.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "in.shantanupatil.notificationmanager",
+            "certificate_hash": "061a76056c19a77fc1ffafb0a577bfc5c89343c4"
+          }
+        },
+        {
+          "client_id": "275937198342-9dgikbnbfa9tnej8p01aqvkmrelu47ft.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDp_ue-1rAoJz1YxkzO8AbWBd2xuAkp3SI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "275937198342-9dgikbnbfa9tnej8p01aqvkmrelu47ft.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

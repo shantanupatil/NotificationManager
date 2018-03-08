@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">NotificationManager</string>
+
+    <string-array name="branch_name">
+        <item>First Year</item>
+        <item>Computer Technology</item>
+        <item>Mechanical Engineering</item>
+        <item>Electronics Engineering</item>
+        <item>Electrical Engineering</item>
+        <item>Information Technology</item>
+        <item>Civil Engineering</item>
+    </string-array>
+
+
+    <string name="event_home_description">List of Events</string>
+
+    <string name="staff_home_description">Updates from Staff</string>
+
+    <string name="principal_home_description">Greetings from Principal</string>
+
+    <string name="tcp_home_description">Updates from Traning and Placement</string>
+
+    <string name="add_event_home_description">Add events</string>
+
+    <string name="send_notification_home_description">Send Notifications</string>
+    <string name="login_text_description">Use your email provided at the tome of registration to login into your account</string>
+    <string name="instructions_header">Welcome, you\'re here means you\'ve got right to publish events on our Applications. But before publishing you should consider the following points</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_home_page">HomePage</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="easy_for_user">We\'ve made authentication easy for our user with Firebase</string>
+    <string name="verification">Enter the email address using which you\'ve registered to the application. Please use this feature only if you\'ve not received verification email.</string>
+    <string name="screen_two">Don\'t Know which Company Visited your college?</string>
+    <string name="screen_one">Tedious tracking Your Day to Day Notice Board?</string>
+    <string name="credits_string">Credits should be given to Sanjay Khajure (Project Guide), Shantanu Patil, Pranali Kalambe, Akshay Chatur, Tapan Lokhande for their efforts regarding this project.</string>
+
+</resources>

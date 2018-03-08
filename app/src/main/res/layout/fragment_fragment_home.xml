@@ -1,0 +1,483 @@
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:shimmer="http://schemas.android.com/apk/res-auto"
+    tools:context="in.shantanupatil.notificationmanager.FragmentHome">
+
+    <LinearLayout
+        android:id="@+id/notice_home_text"
+        android:orientation="vertical"
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
+                android:background="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="270dp">
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:src="@drawable/layers"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp" />
+
+                <TextView
+                    android:id="@+id/notifier"
+                    android:textColor="#FFF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Stay Updated"
+                    android:layout_marginTop="5dp"
+                    android:textSize="20sp"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/shareApp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/circle"
+                android:src="@drawable/ic_share_white_24dp"
+                android:padding="@dimen/padding_10"
+                android:layout_marginTop="242dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/padding_10"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:textColor="#F44336"
+            android:id="@+id/notice_home"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="New Notice"
+            android:textSize="20sp"/>
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer_view_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            shimmer:duration="800">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <include layout="@layout/placeholder_notice" />
+
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_below="@+id/notice_home"
+            android:id="@+id/recycler_home_notice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <View
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f5f5f5"/>
+
+        <TextView
+            android:id="@+id/notice_stuff"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="More Stuff"
+            android:textSize="20sp"/>
+
+
+        <LinearLayout
+            android:padding="20dp"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="190dp">
+
+            <LinearLayout
+                android:layout_marginRight="5dp"
+                android:id="@+id/tnp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.CardView
+                    app:cardUseCompatPadding="true"
+                    app:cardElevation="2dp"
+                    app:cardCornerRadius="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:padding="2dp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:padding="20dp"
+                            android:src="@drawable/tnp"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:layout_weight="3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="TNP"
+                            android:gravity="center"
+                            android:textSize="20sp"/>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/events"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <android.support.v7.widget.CardView
+                    app:cardUseCompatPadding="true"
+                    app:cardElevation="2dp"
+                    app:cardCornerRadius="4dp"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:padding="20dp"
+                            android:src="@drawable/event"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:layout_weight="3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Events"
+                            android:gravity="center"
+                            android:textSize="20sp"/>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:padding="20dp"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="190dp">
+
+            <LinearLayout
+                android:layout_marginRight="5dp"
+                android:id="@+id/notice"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.CardView
+                    app:cardUseCompatPadding="true"
+                    app:cardElevation="2dp"
+                    app:cardCornerRadius="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:padding="2dp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:padding="20dp"
+                            android:src="@drawable/notice"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:layout_weight="3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Notice"
+                            android:gravity="center"
+                            android:textSize="20sp"/>
+
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/faq"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <android.support.v7.widget.CardView
+                    app:cardUseCompatPadding="true"
+                    app:cardElevation="2dp"
+                    app:cardCornerRadius="4dp"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:padding="20dp"
+                            android:src="@drawable/question"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:layout_weight="3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="FAQ"
+                            android:gravity="center"
+                            android:textSize="20sp"/>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_admin"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/notice_admin"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Super User"
+                android:textSize="20sp"/>
+
+
+            <LinearLayout
+                android:id="@+id/staff_hide_layout"
+                android:padding="20dp"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="190dp">
+
+                <LinearLayout
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/add_tnp"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <android.support.v7.widget.CardView
+                        app:cardUseCompatPadding="true"
+                        app:cardElevation="2dp"
+                        app:cardCornerRadius="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:padding="2dp"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:padding="20dp"
+                                android:src="@drawable/tnp"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"/>
+
+                            <TextView
+                                android:layout_weight="3"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="Add TNP"
+                                android:gravity="center"
+                                android:textSize="20sp"/>
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/addevents"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <android.support.v7.widget.CardView
+                        app:cardUseCompatPadding="true"
+                        app:cardElevation="2dp"
+                        app:cardCornerRadius="4dp"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:padding="20dp"
+                                android:src="@drawable/event"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"/>
+
+                            <TextView
+                                android:layout_weight="3"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="Add Events"
+                                android:gravity="center"
+                                android:textSize="20sp"/>
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout_tnp_hide"
+                android:padding="20dp"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="190dp">
+
+                <LinearLayout
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/addnotice"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <android.support.v7.widget.CardView
+                        app:cardUseCompatPadding="true"
+                        app:cardElevation="2dp"
+                        app:cardCornerRadius="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:padding="2dp"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:padding="20dp"
+                                android:src="@drawable/notice"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"/>
+
+                            <TextView
+                                android:layout_weight="3"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="Add Notice"
+                                android:gravity="center"
+                                android:textSize="20sp"/>
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

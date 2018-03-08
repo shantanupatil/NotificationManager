@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="in.shantanupatil.notificationmanager.Events.RetriveEvents.ActivityEventDetail">
+
+    <android.support.design.widget.AppBarLayout
+        android:fitsSystemWindows="true"
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:layout_height="280dp">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsingTool"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            app:layout_scrollFlags="exitUntilCollapsed|scroll"
+            app:contentScrim="?attr/colorPrimary"
+            app:title="Detail">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolBar"
+                android:background="@android:color/transparent"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:fitsSystemWindows="true"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"/>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:padding="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:enabled="true"
+                android:textIsSelectable="true"
+                android:focusable="true"
+                android:longClickable="true"
+                android:id="@+id/detail_title_event"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Event Title"
+                android:textColor="#333"
+                android:textSize="25sp" />
+
+
+            <LinearLayout
+                android:id="@+id/linear_event"
+                android:orientation="vertical"
+                android:layout_marginTop="35dp"
+
+                android:layout_below="@+id/detail_title_event"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:alpha="0.6"
+                        android:id="@+id/image_time"
+                        android:layout_weight="1"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_date_range_black_48dp"/>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_toRightOf="@+id/image_time"
+                        android:layout_width="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="21dp">
+
+                        <TextView
+                            android:id="@+id/detail_time_month"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:text="Jan 25 2018"
+                            />
+
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:id="@+id/detail_time_time"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:text="17:24 PM GST+"
+                            />
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:alpha="0.6"
+                        android:id="@+id/image_forum"
+                        android:layout_weight="1"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_favorite_border_black_48dp"/>
+
+                    <TextView
+                        android:layout_toRightOf="@+id/image_forum"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/detail_forum_event"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="21dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:text="The CRFCamps"/>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginTop="14dp"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:alpha="0.6"
+                        android:id="@+id/image_price"
+                        android:layout_weight="1"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_attach_money_black_48dp"/>
+
+                    <TextView
+                        android:layout_toRightOf="@+id/image_price"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/detail_price_event"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="21dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:text="15 INR"/>
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/event_view"
+                android:layout_below="@+id/linear_event"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#cccaca"/>
+
+            <RelativeLayout
+                android:id="@+id/relative_event"
+                android:layout_below="@+id/event_view"
+                android:layout_marginTop="40dp"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:id="@+id/detail_noting"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="19sp"
+                    android:text="Description"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_below="@+id/relative_event"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:enabled="true"
+                    android:textIsSelectable="true"
+                    android:focusable="true"
+                    android:longClickable="true"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/detail_description_event"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:text="Description"/>
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>
