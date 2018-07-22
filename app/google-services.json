@@ -1,9 +1,9 @@
 {
   "project_info": {
-    "project_number": "275937198342",
-    "firebase_url": "https://whatup-notifier.firebaseio.com",
-    "project_id": "whatup-notifier",
-    "storage_bucket": "whatup-notifier.appspot.com"
+    "project_number": "..",
+    "firebase_url": "..",
+    "project_id": "..",
+    "storage_bucket": ".."
   },
   "client": [
     {
@@ -15,21 +15,21 @@
       },
       "oauth_client": [
         {
-          "client_id": "275937198342-lmtstnuo8uhtn2n6t39agt3nk22tmjig.apps.googleusercontent.com",
+          "client_id": "..",
           "client_type": 1,
           "android_info": {
             "package_name": "in.shantanupatil.notificationmanager",
-            "certificate_hash": "061a76056c19a77fc1ffafb0a577bfc5c89343c4"
+            "certificate_hash": ".."
           }
         },
         {
-          "client_id": "275937198342-9dgikbnbfa9tnej8p01aqvkmrelu47ft.apps.googleusercontent.com",
+          "client_id": "..",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDp_ue-1rAoJz1YxkzO8AbWBd2xuAkp3SI"
+          "current_key": ".."
         }
       ],
       "services": {
@@ -40,7 +40,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "275937198342-9dgikbnbfa9tnej8p01aqvkmrelu47ft.apps.googleusercontent.com",
+              "client_id": "..",
               "client_type": 3
             }
           ]
