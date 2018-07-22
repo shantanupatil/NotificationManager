@@ -142,9 +142,8 @@ public class FragmentHome extends Fragment implements Notice_Datapassing{
             public void onClick(View view) {
                 Intent intent = new Intent(Intent.ACTION_SEND);
                 intent.setType("text/plain");
-                String link = "Download: https://play.google.com/store/apps/details?id=in.shantanupatil.notificationmanager";
-                String message = "Greetings. Have you tried KITS Notifier? If you belong to KITS College this " +
-                        "Application will tell you everything you need to know\n\n";
+                String link = "..";
+                String message = "..";
                 intent.putExtra(Intent.EXTRA_TEXT, "" + message + "" + link);
                 startActivity(Intent.createChooser(intent, "Share Via"));
             }
@@ -425,25 +424,25 @@ public class FragmentHome extends Fragment implements Notice_Datapassing{
     public void onStart() {
         super.onStart();
         String user = FirebaseAuth.getInstance().getCurrentUser().getEmail();
-        if (user.equals("admin_notifier@studentrevise.com")) {
+        if (user.equals("..")) {
             admin_layout.setVisibility(View.VISIBLE);
             addevents.setVisibility(View.VISIBLE);
             notice_admin.setVisibility(View.VISIBLE);
             addtnp.setVisibility(View.VISIBLE);
             addnotice.setVisibility(View.VISIBLE);
-        } else if (user.equals("tnp@studentrevise.com")) {
+        } else if (user.equals("..")) {
             admin_layout.setVisibility(View.VISIBLE);
             notice_admin.setVisibility(View.VISIBLE);
             addtnp.setVisibility(View.VISIBLE);
             addevents.setVisibility(View.GONE);
             linearLayout_tnp_hide.setVisibility(View.GONE);
-        } else if (user.equals("events@studentrevise.com")) {
+        } else if (user.equals("..")) {
             admin_layout.setVisibility(View.VISIBLE);
             notice_admin.setVisibility(View.VISIBLE);
             addtnp.setVisibility(View.GONE);
             addevents.setVisibility(View.VISIBLE);
             linearLayout_tnp_hide.setVisibility(View.GONE);
-        } else if (user.equals("staff@studentrevise.com")) {
+        } else if (user.equals("..")) {
             notice_admin.setVisibility(View.VISIBLE);
             addnotice.setVisibility(View.VISIBLE);
             admin_layout.setVisibility(View.VISIBLE);
