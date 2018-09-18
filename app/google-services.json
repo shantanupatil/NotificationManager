@@ -8,7 +8,7 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:275937198342:android:64a4ffe545bb6c0d",
+        "mobilesdk_app_id": "add_your_id_here",
         "android_client_info": {
           "package_name": "in.shantanupatil.notificationmanager"
         }
